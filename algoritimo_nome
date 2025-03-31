@@ -1,0 +1,5 @@
+
+var nome = prompt("Escreva seu nome");
+console.log (nome);
+alert ("Seja bem vindo! " + nome)
+
