@@ -1,9 +1,0 @@
-var numero1 = prompt ("Digite sua idade: ");
-
-    if (numero1 >= 18) {
-        alert("Vc atingiu a maioridade ");
-    } else { 
-        var idade = 18 - numero1
-        alert("Vc não atingiu a maioridade ");
-        alert("Ainda te falta: " + idade );
-    }
