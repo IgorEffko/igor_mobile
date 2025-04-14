@@ -1,0 +1,9 @@
+var usuario = prompt ("Digite seu nome de usuario");
+console.log (usuario);
+
+var senha = prompt ("Digite sua senha");
+console.log (senha);
+
+alert ("Clique em OK se seu nome de usuario for " + usuario);
+
+alert ("Clique em OK se sua senha for " + senha);
