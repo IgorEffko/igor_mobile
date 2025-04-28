@@ -1,0 +1,122 @@
+HTML
+  <h1>Login</h1>
+        <form id="login">
+           
+    
+            <label for="email">Email:</label>
+            <input type="text" id="email"><br>
+           
+    
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha"><br>
+    
+    
+            <button type="submit" id="botao">Entrar</button>        
+    
+    
+            <!-- <button type="submit" onclick="executar()">Enviar</button> -->
+        </form>    
+        <script src="login.js"></script>
+        <link rel="stylesheet" href="login.css">
+
+        JS
+        var meuFormulario = document.getElementById("login");
+meuFormulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+
+    var email = (document.getElementById("email").value);
+    var senha = (document.getElementById("senha").value);
+    
+    if(email == "igor.vendruscolo@escola.pr.gov.br" && senha == 123) {
+    
+        alert("Eba email correto :)")
+        console.log ("Email correto");
+    
+        }  else {
+    alert("Opa algo está errado :/")
+            console.log("Email incorreto")
+        }
+
+
+
+});
+
+CSS
+/* estilo_login.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe0e0; /* Tom de vermelho claro para o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    color: #8b0000; /* Vermelho escuro para o título */
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #8b0000; /* Linha vermelha abaixo do título */
+    padding-bottom: 10px;
+}
+
+#login {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #ff4d4d; /* Borda vermelha mais grossa */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: bold;
+}
+
+#email,
+#senha {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ff8080; /* Borda vermelha mais clara para os inputs */
+    border-radius: 6px; /* Bordas arredondadas para os inputs */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#email:focus,
+#senha:focus {
+    border-color: #d90000; /* Vermelho mais intenso no foco */
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.7); /* Sombra vermelha no foco */
+}
+
+#botao {
+    background-color: #ff4d4d; /* Botão vermelho */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Leve sombra no botão */
+}
+
+#botao:hover {
+    background-color: #d90000; /* Vermelho mais escuro no hover */
+}
+
+#botao:active {
+    background-color: #b30000; /* Vermelho ainda mais escuro ao clicar */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra menor ao clicar */
+}
